@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LUMIÈRE DOM Structure — Interactive Document Object Model diagram of the LUMIÈRE website architecture.">
+  <meta property="og:title" content="Website Architecture — LUMIÈRE">
+  <meta property="og:description" content="Document Object Model structure of the LUMIÈRE website.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23C9A84C'>✦</text></svg>">
+  <title>DOM Structure — LUMIÈRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-mark">✦</div>
+    <div class="preloader-text">LUMIÈRE</div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">✦</span>
+        <span class="logo-text">LUMIÈRE</span>
+        <span class="logo-sub">MAISON DE MODE</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Collection</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html#appointment" class="nav-cta">Book Appointment</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="products.html">Collection</a>
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html#appointment" class="nav-cta" style="margin-top: 1rem;">Book Appointment</a>
+  </div>
+
+  <!-- Marquee Ticker -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <span>✦ PARIS FASHION WEEK — MARCH 2025 &nbsp;&nbsp; ✦ &nbsp;&nbsp; NEW COLLECTION: L'ÉTERNEL &nbsp;&nbsp; ✦ &nbsp;&nbsp; EXCLUSIVE TRUNK SHOW — APRIL 12, 2025 &nbsp;&nbsp; ✦ &nbsp;&nbsp; LUMIÈRE × VOGUE COLLABORATION ANNOUNCED &nbsp;&nbsp; ✦ &nbsp;&nbsp; SPRING/SUMMER LOOKBOOK NOW AVAILABLE &nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Website <em>Architecture</em></h1>
+        <p>Document Object Model structure of the LUMIÈRE website.</p>
+      </div>
+    </section>
+
+    <!-- ===== DOM TREE ===== -->
+    <section class="section-lg">
+      <div class="container">
+        <span class="section-label reveal">DOM STRUCTURE</span>
+        <h2 class="section-heading reveal">index.html <em>Tree</em></h2>
+        <p class="reveal" style="max-width: 640px; margin-bottom: var(--space-10);">Click any node with children (▼) to expand or collapse it. This interactive diagram represents the Document Object Model of the LUMIÈRE home page.</p>
+
+        <div class="dom-tree reveal" id="dom-tree">
+          <!-- Tree is built by JS below -->
+        </div>
+
+        <!-- Legend -->
+        <div class="dom-legend reveal">
+          <div class="dom-legend-item">
+            <span class="swatch" style="background: var(--color-gold);"></span>
+            <span>Element Node</span>
+          </div>
+          <div class="dom-legend-item">
+            <span class="swatch" style="background: var(--color-gold-light);"></span>
+            <span>Class / Attribute</span>
+          </div>
+          <div class="dom-legend-item">
+            <span class="swatch" style="background: var(--color-text-muted);"></span>
+            <span>Text / Description</span>
+          </div>
+          <div class="dom-legend-item">
+            <span class="swatch" style="background: var(--color-text-dim);"></span>
+            <span>Collapsible Parent</span>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-top: var(--space-10); padding: var(--space-8); background: var(--color-surface); border: 1px solid var(--color-border);">
+          <h4 style="margin-bottom: var(--space-4);">About the DOM</h4>
+          <p style="font-size: var(--text-sm); margin-bottom: var(--space-4);">The <strong style="color: var(--color-gold);">Document Object Model (DOM)</strong> is a programming interface for web documents. It represents the page as a tree of nodes so that programs — primarily JavaScript — can change the document structure, style, and content.</p>
+          <p style="font-size: var(--text-sm); margin-bottom: var(--space-4);">Every HTML element becomes a <strong style="color: var(--color-gold);">node</strong> in the tree. Parent elements contain child elements, forming a hierarchical structure. JavaScript uses methods like <code style="color: var(--color-gold-light); background: var(--color-surface-2); padding: 0.1em 0.4em;">document.querySelector()</code> and <code style="color: var(--color-gold-light); background: var(--color-surface-2); padding: 0.1em 0.4em;">getElementById()</code> to traverse and manipulate this tree.</p>
+          <p style="font-size: var(--text-sm); margin-bottom: 0;">On the LUMIÈRE website, JavaScript interacts with the DOM to power scroll animations, the mobile menu, modal overlays, form validation, countdown timers, product filtering, and the interactive tree diagram you see above.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SITE MAP ===== -->
+    <section class="section" style="border-top: 1px solid var(--color-border);">
+      <div class="container text-center">
+        <span class="section-label reveal" style="justify-content: center;">SITE MAP</span>
+        <h2 class="section-heading reveal">Page <em>Structure</em></h2>
+
+        <div class="reveal">
+          <!-- Home node -->
+          <div style="display: flex; justify-content: center;">
+            <div class="sitemap-node home-node">
+              <h4>Home</h4>
+              <p>index.html</p>
+            </div>
+          </div>
+
+          <!-- Connector -->
+          <div class="sitemap-connector">
+            <div class="line"></div>
+          </div>
+
+          <!-- Horizontal line -->
+          <div style="display: flex; justify-content: center; margin-bottom: var(--space-4);">
+            <div style="width: 80%; max-width: 800px; height: 1px; background: rgba(201,168,76,0.3);"></div>
+          </div>
+
+          <!-- Child pages -->
+          <div class="sitemap-pages">
+            <div class="sitemap-node">
+              <h4>Collection</h4>
+              <p>products.html</p>
+            </div>
+            <div class="sitemap-node">
+              <h4>About</h4>
+              <p>about.html</p>
+            </div>
+            <div class="sitemap-node">
+              <h4>Events</h4>
+              <p>events.html</p>
+            </div>
+            <div class="sitemap-node">
+              <h4>Contact</h4>
+              <p>contact.html</p>
+            </div>
+            <div class="sitemap-node">
+              <h4>DOM</h4>
+              <p>dom.html</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="reveal" style="margin-top: var(--space-10); font-size: var(--text-sm); color: var(--color-text-dim);">All pages share a common navigation, marquee ticker, and footer. Each page links to every other page for seamless navigation.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-mark">✦</span>
+            <span class="logo-text">LUMIÈRE</span>
+            <span class="logo-sub">MAISON DE MODE</span>
+          </div>
+          <p>Haute couture redefined for the modern era. Where craftsmanship meets contemporary vision.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Collection</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>15 Adeola Odeku Street, Victoria Island, Lagos, Nigeria</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>hello@lumieremode.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+234 (0) 800 LUMIERE</span>
+          </div>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="footer-social-links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 LUMIÈRE Maison de Mode. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+  /* ============================================
+     DOM Tree Builder — Inline for this page only
+     (Data-driven, builds the interactive tree)
+     ============================================ */
+  (function () {
+    'use strict';
+
+    var treeData = {
+      tag: 'html', children: [
+        { tag: 'head', children: [
+          { tag: 'meta', attr: 'charset, viewport, description' },
+          { tag: 'title', text: 'LUMIÈRE — Maison de Mode' },
+          { tag: 'link', attr: 'style.css' },
+          { tag: 'script', attr: 'main.js, home.js' }
+        ]},
+        { tag: 'body', children: [
+          { tag: 'nav', cls: '.navbar', children: [
+            { tag: 'div', cls: '.logo' },
+            { tag: 'ul', cls: '.nav-links', children: [
+              { tag: 'li', text: '> a (Home)' },
+              { tag: 'li', text: '> a (Collection)' },
+              { tag: 'li', text: '> a (About)' },
+              { tag: 'li', text: '> a (Events)' },
+              { tag: 'li', text: '> a (Contact)' }
+            ]},
+            { tag: 'a', cls: '.btn-outline', text: '(Book Appointment)' },
+            { tag: 'button', cls: '.hamburger' }
+          ]},
+          { tag: 'div', cls: '.marquee-wrapper', children: [
+            { tag: 'div', cls: '.marquee-track', children: [
+              { tag: 'span', text: '(ticker text)' }
+            ]}
+          ]},
+          { tag: 'main', children: [
+            { tag: 'section', cls: '.hero', children: [
+              { tag: 'div', cls: '.hero-content', children: [
+                { tag: 'span', cls: '.section-label' },
+                { tag: 'h1' },
+                { tag: 'p', cls: '.hero-subtitle' },
+                { tag: 'div', cls: '.hero-buttons' }
+              ]},
+              { tag: 'div', cls: '.scroll-indicator' }
+            ]},
+            { tag: 'section', cls: '.stats-bar' },
+            { tag: 'section', cls: '.featured-collection' },
+            { tag: 'section', cls: '.brand-statement' },
+            { tag: 'section', cls: '.events-preview' },
+            { tag: 'section', cls: '.newsletter' }
+          ]},
+          { tag: 'footer', children: [
+            { tag: 'div', cls: '.footer-grid', children: [
+              { tag: 'div', cls: '.footer-brand' },
+              { tag: 'div', cls: '.footer-links' },
+              { tag: 'div', cls: '.footer-contact' },
+              { tag: 'div', cls: '.footer-social' }
+            ]},
+            { tag: 'div', cls: '.footer-bottom' }
+          ]}
+        ]}
+      ]
+    };
+
+    function buildNode(data) {
+      var li = document.createElement('li');
+      li.className = 'dom-node';
+
+      var label = document.createElement('div');
+      label.className = 'dom-node-label';
+
+      var hasChildren = data.children && data.children.length > 0;
+
+      if (hasChildren) {
+        var toggle = document.createElement('span');
+        toggle.className = 'toggle-icon';
+        toggle.textContent = '▼';
+        label.appendChild(toggle);
+      }
+
+      var elName = document.createElement('span');
+      elName.className = 'element-name';
+      elName.textContent = data.tag;
+      label.appendChild(elName);
+
+      if (data.cls) {
+        var clsName = document.createElement('span');
+        clsName.className = 'class-name';
+        clsName.textContent = data.cls;
+        label.appendChild(clsName);
+      }
+
+      if (data.attr) {
+        var attrText = document.createElement('span');
+        attrText.className = 'attr-text';
+        attrText.textContent = '(' + data.attr + ')';
+        label.appendChild(attrText);
+      }
+
+      if (data.text) {
+        var textNode = document.createElement('span');
+        textNode.className = 'attr-text';
+        textNode.textContent = data.text;
+        label.appendChild(textNode);
+      }
+
+      li.appendChild(label);
+
+      if (hasChildren) {
+        var ul = document.createElement('ul');
+        data.children.forEach(function (child) {
+          ul.appendChild(buildNode(child));
+        });
+        li.appendChild(ul);
+
+        /* Toggle collapse */
+        label.addEventListener('click', function () {
+          li.classList.toggle('collapsed');
+        });
+      }
+
+      return li;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var container = document.getElementById('dom-tree');
+      if (!container) return;
+
+      var rootUl = document.createElement('ul');
+      rootUl.appendChild(buildNode(treeData));
+      container.appendChild(rootUl);
+    });
+  })();
+  </script>
+</body>
+</html>

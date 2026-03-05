@@ -1,0 +1,24 @@
+LUMIÈRE — Image Placeholders
+==============================
+
+This directory is reserved for image assets.
+
+All product images, event photos, team member portraits, and other visual 
+assets should be placed in this folder when available.
+
+Currently, the website uses CSS-generated placeholder visuals:
+- Linear gradient backgrounds (#1a1a1a → #2a2a2a)
+- Centered gold ✦ symbols as decorative placeholders
+- Font Awesome user icons for team member photos
+
+When replacing with real images:
+1. Use high-quality images (minimum 1200px wide for full-width, 600px for cards)
+2. Optimize for web (WebP format recommended, JPEG as fallback)
+3. Maintain aspect ratios: 3:4 for product cards, 1:1 for team members
+4. Update the src attributes in the HTML files accordingly
+
+Recommended naming convention:
+- product-[name].jpg (e.g., product-eternel-gown.jpg)
+- team-[name].jpg (e.g., team-john-doe.jpg)
+- event-[name].jpg (e.g., event-spring-gala.jpg)
+- hero-[page].jpg (e.g., hero-home.jpg)
